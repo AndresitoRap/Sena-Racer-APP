@@ -36,7 +36,7 @@ public class Text : MonoBehaviour
     public AudioClip[] clipsWomen;
 
     // Velocidad de escritura del texto
-    public float textSpeed = 0.3f;
+    public float textSpeed = 0.2f;
 
     // Índice que representa la línea actual en el diálogo
     private int index;
@@ -132,7 +132,7 @@ public class Text : MonoBehaviour
         }
         else
         {
-            // Si se ha llegado al final del diálogo, desactiva el objeto y carga la escena "Location-basedGame"
+            // Si se ha llegado al final del diálogo, desactiva el objeto y carga la escena
             gameObject.SetActive(false);
             SceneManager.LoadScene("Loading");
         }
