@@ -7,28 +7,36 @@ using TMPro;
 
 public class SceneController : MonoBehaviour
 {
-    public string sceneLoadName;
     public TMP_Text textProgress;
     public Slider sliderProgress;
     public float currentPercent;
-    public void LoadSceneButton() {
-        StartCoroutine(LoadScene(sceneLoadName));
+    private float loadingTime = 3.0f;
+
+    void Start() {
+        StartCoroutine(LoadScene("GeospatialArf5"));
     }
-    public IEnumerator LoadScene(string  nameToLoad) {
+
+    public IEnumerator LoadScene(string nameToLoad) {
+        float elapsedTime = 0;
         textProgress.text = "Cargando 00%";
         AsyncOperation loadAsync = SceneManager.LoadSceneAsync(nameToLoad);
-        
-        while (!loadAsync.isDone)
+        loadAsync.allowSceneActivation = false;
+
+        while (elapsedTime < loadingTime)
         {
-            currentPercent = loadAsync.progress * 100 / 0.9f;
+            elapsedTime += Time.deltaTime;
+            currentPercent = Mathf.Clamp01(elapsedTime / loadingTime) * 100;
             textProgress.text = "Cargando " + currentPercent.ToString("00")+"%";
+
+            if (currentPercent >= 100)
+            {
+                loadAsync.allowSceneActivation = true;
+            }
             yield return null;
         }
     } 
 
     private void Update () {
-        sliderProgress.value = Mathf.MoveTowards(sliderProgress.value, currentPercent, 10 * Time.deltaTime);
+        sliderProgress.value = Mathf.MoveTowards(sliderProgress.value, currentPercent, 33.3f * Time.deltaTime);
     }
 }
-
-
