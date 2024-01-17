@@ -1,7 +1,8 @@
 # Carreras de Observación AR
 
 <p align="center">
-  ![sena racer](https://github.com/AndresitoRap/Sena-Racer/assets/110676905/a35b5a86-a567-48e9-892f-db479df0aad9)
+ <img src="https://github.com/AndresitoRap/Sena-Racer/assets/110676905/a35b5a86-a567-48e9-892f-db479df0aad9" />
+
 </p>
 
 
