@@ -23,8 +23,10 @@ Bienvenido a la aplicación de **Carrera de Observación con Realidad Aumentada*
 
 ## 💻 Requisitos del Sistema
 
-- Dispositivo móvil compatible con ARCore Android.
+- Dispositivo móvil Android.
 - Conexión a Internet para participar en carreras en tiempo real.
+- Contar con una conexión a internet estable.
+- Contar con servicios de ubicación.
 
 ## 🚀 Cómo Empezar
 
@@ -39,6 +41,7 @@ Bienvenido a la aplicación de **Carrera de Observación con Realidad Aumentada*
 3. **🌍 Explora y Compite:**
    - Explora tu entorno en busca de códigos QR ocultos.
    - Escanea los códigos para obtener pistas, bonificaciones y pruebas.
+   - Realiza las pruebas para poder completar la estación.
    - Únete y compite contra otros jugadores.
 
 4. **🏆 Gana y Desbloquea Logros:**
