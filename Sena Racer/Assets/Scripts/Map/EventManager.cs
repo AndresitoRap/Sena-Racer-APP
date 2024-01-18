@@ -27,17 +27,22 @@ public class EventManager : MonoBehaviour
         if (eventID == 1)
         {
             // Cargar la escena "FirstScene" cuando el identificador del evento es 1
-            SceneManager.LoadScene("Explication");
+            SceneManager.LoadScene("AExplication");
         }
-        else if (eventID == 2)
-        {
-            // Cargar la escena "SecondScene" cuando el identificador del evento es 2
-            SceneManager.LoadScene("Ejemplo");
-        }
+        // else if (eventID == 2)
+        // {
+        //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
+        //     SceneManager.LoadScene("Escena Mauricio, diego o ximena");
+        // }
         // else if (eventID == 3)
         // {
         //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
-        //     SceneManager.LoadScene("FirstScene");
+        //     SceneManager.LoadScene("Escena Mauricio, diego o ximena");
+        // }
+        // else if (eventID == 4)
+        // {
+        //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
+        //     SceneManager.LoadScene("Escena Mauricio, diego o ximena");
         // }
 
         PlayerPrefs.SetInt("EventCompleted_" + eventID, 1);
