@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8724942962964001485, guid: ef11a8f58bdc6dd4d80a130f260c84d0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b72dafc83fafa5846ba61e4229f90be4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -673,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 252.22513, y: -352.52252}
+  m_AnchoredPosition: {x: 252.22513, y: -352.52246}
   m_SizeDelta: {x: 379.9747, y: 342.95764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696394941
@@ -726,6 +730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Women
       objectReference: {fileID: 0}
+    - target: {fileID: 2754796924356381808, guid: 41d86a792737390438334bfddc160120, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b72dafc83fafa5846ba61e4229f90be4, type: 2}
     - target: {fileID: 3338737219980120284, guid: 41d86a792737390438334bfddc160120, type: 3}
       propertyPath: m_LocalScale.x
       value: 277.3761

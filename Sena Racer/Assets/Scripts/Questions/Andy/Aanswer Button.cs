@@ -19,8 +19,8 @@ public class AanswerButton : MonoBehaviour
     private int correctAnswerIndex;      // Índice de la respuesta correcta
     private Color correctColor = Color.green;   // Color para respuesta correcta
     private Color incorrectColor = Color.red;   // Color para respuesta incorrecta
-    public Animator avatarAnimatorMen;
-    public Animator avatarAnimatorWomen;
+    private Animator avatarAnimatorMen;
+    private Animator avatarAnimatorWomen;
     private float timer;                 // Variable para el cronómetro
     private bool timerRunning = true;
     private Coroutine timerCoroutine;    // Referencia a la rutina del cronómetro
@@ -144,50 +144,70 @@ public class AanswerButton : MonoBehaviour
             // Respuesta correcta
             SetButtonColor(answerButtons[buttonIndex], correctColor);
             PlaySound(correctSound);
-            Debug.Log("Respuesta correcta");
             
-            
-            
+            // Verifica si se ha seleccionado el avatar masculino
+            if (Men && MenCharacter != null)
+            {
+                avatarAnimatorMen = MenCharacter.GetComponent<Animator>();
+                if (avatarAnimatorMen != null)
+                {
+                    // Ejecuta la animación "Correcta" en el avatar
+                    avatarAnimatorMen.SetTrigger("Correct");
+                }
 
-             // Verifica si se ha seleccionado el avatar masculino
-        if (Men == true)
-        {
-            // Ejecuta la animación "Correcta" en el avatar
-            avatarAnimatorMen.SetTrigger("Correct");
+                // Destruye el objeto del avatar femenino
+                Destroy(WomenCharacter);
+            }
             
-            // Destruye el objeto del avatar femenino
-            Destroy(WomenCharacter);
-        }
-        
-        // Verifica si se ha seleccionado el avatar femenino
-        if (Women == true)
-        {
-            // Ejecuta la animación "Correcta" en el avatar
-            avatarAnimatorWomen.SetTrigger("Correct");
-            
-            // Destruye el objeto del avatar masculino
-            Destroy(MenCharacter);
-        }
+            // Verifica si se ha seleccionado el avatar femenino
+            if (Women && WomenCharacter != null)
+            {
+                avatarAnimatorWomen = WomenCharacter.GetComponent<Animator>();
+                if (avatarAnimatorWomen != null)
+                {
+                    // Ejecuta la animación "Correcta" en el avatar
+                    avatarAnimatorWomen.SetTrigger("Correct");
+                }
+
+                // Destruye el objeto del avatar masculino
+                Destroy(MenCharacter);
+            }
 
             // Detén el cronómetro solo en caso de respuesta correcta
             timerRunning = false;
 
             // Realiza acciones específicas para la respuesta correcta después de un retraso de 3 segundos
             Invoke("LoadNextScene", 3f);
-            }
+        }
         else
         {
             // Respuesta incorrecta
             SetButtonColor(answerButtons[buttonIndex], incorrectColor);
             PlaySound(incorrectSound);
-            Debug.Log("Respuesta incorrecta");
 
             // Ejecuta la animación "Incorrecta" en el avatar
-            avatarAnimatorMen.SetTrigger("Incorrect");
-            avatarAnimatorWomen.SetTrigger("Incorrect");
+            if (Men && MenCharacter != null)
+            {
+                avatarAnimatorMen = MenCharacter.GetComponent<Animator>();
+                if (avatarAnimatorMen != null)
+                {
+                    avatarAnimatorMen.SetTrigger("Incorrect");
+                }
+            }
+
+            if (Women && WomenCharacter != null)
+            {
+                avatarAnimatorWomen = WomenCharacter.GetComponent<Animator>();
+                if (avatarAnimatorWomen != null)
+                {
+                    avatarAnimatorWomen.SetTrigger("Incorrect");
+                }
+            }
+
+            Debug.Log("Respuesta incorrecta");
 
             // Realiza acciones específicas para la respuesta incorrecta después de un retraso
-            Invoke("RestartButtons", delayBeforeRestart);
+                Invoke("RestartButtons", delayBeforeRestart);
         }
     }
 

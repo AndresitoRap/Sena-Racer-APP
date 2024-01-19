@@ -13,7 +13,7 @@ public class SceneController : MonoBehaviour
     private float loadingTime = 3.0f;
 
     void Start() {
-        StartCoroutine(LoadScene("GeospatialArf5"));
+        StartCoroutine(LoadScene("Location-basedGame"));
     }
 
     public IEnumerator LoadScene(string nameToLoad) {
