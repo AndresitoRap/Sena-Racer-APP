@@ -1,5 +1,6 @@
 {
-  "dependencies": {
+    "dependencies": {
+    "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-10.20.3.tgz",
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git#v5.0.0",
     "com.cesium.unity": "file:C:/Sena Racer/com.cesium.unity-1.7.1.tgz",
     "com.google.ar.core.arfoundation.extensions": "file:C:/Sena Racer/arcore-unity-extensions-1.41.0.tgz",

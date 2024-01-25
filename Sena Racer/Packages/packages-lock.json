@@ -33,6 +33,14 @@
         "com.unity.xr.arkit": "4.1.5"
       }
     },
+    "com.ptc.vuforia.engine": {
+      "version": "file:com.ptc.vuforia.engine-10.20.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      }
+    },
     "com.readyplayerme.core": {
       "version": "https://github.com/readyplayerme/rpm-unity-sdk-core.git",
       "depth": 0,
