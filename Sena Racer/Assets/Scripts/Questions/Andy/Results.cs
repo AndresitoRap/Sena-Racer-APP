@@ -25,7 +25,7 @@ public class Results : MonoBehaviour
     public void backMap() {  
         
         SceneManager.LoadScene("Location-basedGame");
-        Progress.Instance.UpdateProgressAfterCompletion();
+        
     }
 
 }

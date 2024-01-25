@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mapbox.Examples;
 
 public class MenuUIManager : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class MenuUIManager : MonoBehaviour
     {
         // Activa el evento correspondiente usando el EventManager
         eventManager.ActivateEvent(tempEvent);
+        // Desactiva la estación en el mapa después de visitarla
+        FindObjectOfType<SpawnOnMap>().DeactivateStation(tempEvent - 1);
     }
 
     // Método para mostrar el panel de usuario fuera de rango

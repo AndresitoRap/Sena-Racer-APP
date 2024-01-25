@@ -2,90 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Mapbox.Examples;
-using UnityEngine.SceneManagement;
 
 public class Progress : MonoBehaviour
-{     // Referencia al componente Image de la barra de progreso
-    public TMP_Text progressText;      // Referencia al componente TextMeshPro para mostrar el progreso
-    private int totalStations;    // Número total de estaciones
-    private int completedStations = 0; // Número de estaciones completadas
-    public GameObject completionImage; 
+{
+     public TMP_Text progressText; // Asigna el componente de texto desde el Editor Unity
+    public GameObject Finally; // Asigna el cuadro blanco desde el Editor Unity
 
-    // Singleton
-    public static Progress Instance { get; private set; }
-
-
-     private void Awake()
+    public void UpdateProgress(int visitedCount, int totalCount)
     {
-        if (Instance == null)
+        // Actualiza el texto del progreso en el canvas
+        progressText.text = visitedCount + "/" + totalCount;
+
+        // Verifica si todas las estaciones han sido visitadas y muestra el cuadro blanco si es necesario
+        if (visitedCount == totalCount)
         {
-            Instance = this;
-            DontDestroyOnLoad(progressText.gameObject); // Solo mantenemos el GameObject del texto persistente
-            DontDestroyOnLoad(completionImage.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject); // Destruimos cualquier instancia adicional del script
+            // Activa el cuadro blanco en el centro del canvas
+            Finally.SetActive(true);
         }
     }
-
-    void Start()
-    {
-        // Inicializa el número total de estaciones
-        totalStations = GameObject.FindObjectOfType<SpawnOnMap>().GetTotalStations();
-        
-        // Asegúrate de cargar el progreso guardado al iniciar
-        UpdateProgress(PlayerPrefs.GetInt("CompletedStations", 0));
-
-        CheckAndShowCompletionImage();
-    }
-
-    private void CheckAndShowCompletionImage()
-    {
-        if (completedStations == totalStations)
-        {
-            // Mostrar la imagen de finalización
-            completionImage.SetActive(true);
-        }
-        else{
-            completionImage.SetActive(false);
-        }
-    }
-
-    public void UpdateProgress(int completed)
-    {
-        completedStations = completed;
-        progressText.text = $"{completedStations}/{totalStations}"; // Actualiza el texto del progreso
-
-        // Guarda el número de estaciones completadas en PlayerPrefs
-        PlayerPrefs.SetInt("CompletedStations", completedStations);
-        PlayerPrefs.Save();
-
-        // Verificar si todas las estaciones se han completado
-        CheckAndShowCompletionImage();
-    }
-
-    public int GetTotalStations()
-    {
-        return totalStations;
-    }
-     public void UpdateProgressAfterCompletion()
-    {
-        completedStations++;
-
-        progressText.text = $"{completedStations}/{totalStations}";
-        PlayerPrefs.SetInt("CompletedStations", completedStations);
-        PlayerPrefs.Save();
-
-    // Verificar si todas las estaciones se han completado
-        CheckAndShowCompletionImage();
-        
-    }
-
-    public void Finally() {
-        SceneManager.LoadScene("Finally");
-    }
-    
-
 }

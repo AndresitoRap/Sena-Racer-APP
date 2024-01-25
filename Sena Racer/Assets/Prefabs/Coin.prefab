@@ -48,13 +48,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7505596249969462345, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 7671730666194755738, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+    - {fileID: -299373499866689122, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+    - {fileID: -4788211399155035108, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+    - {fileID: 5986619753673436733, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+    - {fileID: -3832739132798841748, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}

@@ -668,16 +668,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220223454}
-        m_TargetAssemblyTypeName: Progress, Assembly-CSharp
-        m_MethodName: Finally
-        m_Mode: 1
+      - m_Target: {fileID: 1220223456}
+        m_TargetAssemblyTypeName: ChangeSceneRA, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Finally
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &624407856
@@ -1321,6 +1321,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _options.locationOptions.latitudeLongitude
+      value: 4.721500201067544, -74.21941116444579
+      objectReference: {fileID: 0}
+    - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _vectorData._layerProperty.sourceOptions.isActive
       value: 0
       objectReference: {fileID: 0}
@@ -1374,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[0]
-      value: 4.703070222403507, -74.21581644291774
+      value: 4.721500201067544, -74.21941116444579
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1427,9 +1431,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 843921209}
-  _locationStrings: []
+  _locationStrings:
+  - 4.721508936328551, -74.21935638316491
   _spawnScale: 2
   _markerPrefab: {fileID: 7266971455667123862, guid: 324fc640127e6f240809fda20e87dd65, type: 3}
+  progressText: {fileID: 0}
+  Finally: {fileID: 0}
 --- !u!4 &1133103895
 Transform:
   m_ObjectHideFlags: 0
@@ -1859,8 +1866,8 @@ GameObject:
   - component: {fileID: 1220223452}
   - component: {fileID: 1220223453}
   - component: {fileID: 1220223455}
-  - component: {fileID: 1220223454}
   - component: {fileID: 1220223456}
+  - component: {fileID: 1220223457}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1987,20 +1994,6 @@ MonoBehaviour:
   errorSFX: {fileID: 8300000, guid: d2ba57519e1ee56469f1704f964cc6ca, type: 3}
   okeySFX: {fileID: 8300000, guid: 9b99a58c08a721f4481024c377dd9796, type: 3}
   eventManager: {fileID: 613864758}
---- !u!114 &1220223454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220223447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1fcbc80764fad43a8e8e2a80c7fb0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressText: {fileID: 1375566811}
-  completionImage: {fileID: 624407854}
 --- !u!82 &1220223455
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2109,6 +2102,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681573d073a498347ae5dbb0d8d2932b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1220223457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220223447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1fcbc80764fad43a8e8e2a80c7fb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressText: {fileID: 1375566811}
+  Finally: {fileID: 624407854}
 --- !u!1 &1238235125
 GameObject:
   m_ObjectHideFlags: 0

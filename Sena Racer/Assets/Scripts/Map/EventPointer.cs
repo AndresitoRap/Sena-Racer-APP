@@ -65,9 +65,6 @@ public class EventPointer : MonoBehaviour
         // Calcular la distancia entre el jugador y el evento
         var distance = currentPlayerLocation.GetDistanceTo(eventLocation);
 
-        // Imprimir la distancia en la consola (para propósitos de depuración)
-        Debug.Log("Distance is: " + distance);
-
         // Verificar si el jugador está dentro del rango del evento
         if (distance < 70)
         {

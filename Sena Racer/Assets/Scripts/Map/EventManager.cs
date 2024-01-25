@@ -27,8 +27,13 @@ public class EventManager : MonoBehaviour
         if (eventID == 1)
         {
             // Cargar la escena "FirstScene" cuando el identificador del evento es 1
-            SceneManager.LoadScene("AExplication");
+            SceneManager.LoadScene("AndyVuforia");
         }
+        // else if (eventID == 2)
+        // {
+        //     // Cargar la escena "FirstScene" cuando el identificador del evento es 1
+        //     Debug.Log("Escena 2");
+        // }
         // else if (eventID == 2)
         // {
         //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
@@ -44,11 +49,6 @@ public class EventManager : MonoBehaviour
         //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
         //     SceneManager.LoadScene("Escena Mauricio, diego o ximena");
         // }
-
-        PlayerPrefs.SetInt("EventCompleted_" + eventID, 1);
-        PlayerPrefs.Save();
-        // Actualiza el progreso después de completar el evento
-        Progress.Instance.UpdateProgressAfterCompletion();
-        // Puedes agregar más condiciones según sea necesario para otros identificadores de eventos
+    
     }
 }
