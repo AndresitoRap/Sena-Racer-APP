@@ -22,7 +22,7 @@
       }
     },
     "com.ptc.vuforia.engine": {
-      "version": "file:com.ptc.vuforia.engine-10.20.3.tgz",
+      "version": "file:C:/Sena Racer/com.ptc.vuforia.engine-10.20.3.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
