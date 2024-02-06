@@ -221,8 +221,8 @@ public class AanswerButton : MonoBehaviour
         {
             score = 0;
         }
-        PlayerPrefs.SetInt("FinalScore", score);
-        PlayerPrefs.SetFloat("FinalTime", timer);
+        PlayerPrefs.SetInt("ScoreAndy", score);
+        PlayerPrefs.SetFloat("TimeAndy", timer);
         PlayerPrefs.Save();
 
         // Carga la escena llamada "Results"

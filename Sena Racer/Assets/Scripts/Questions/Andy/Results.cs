@@ -13,11 +13,11 @@ public class Results : MonoBehaviour
     void Start()
     {
         // Obtén la puntuación almacenada
-        int finalScore = PlayerPrefs.GetInt("FinalScore", 0);
+        int finalScore = PlayerPrefs.GetInt("ScoreAndy", 0);
         // Muestra la puntuación en el componente de texto
         scoreText.text = "Puntuación Final: " + finalScore.ToString();
 
-        float timeScore = PlayerPrefs.GetFloat("FinalTime", 0);
+        float timeScore = PlayerPrefs.GetFloat("TimeAndy", 0);
         timeText.text = "Tiempo Final: " + timeScore.ToString("F0");
 
         
