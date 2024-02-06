@@ -422,11 +422,6 @@ RectTransform:
   m_AnchoredPosition: {x: 92, y: 85}
   m_SizeDelta: {x: 140, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &529879327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9146532995765306005, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
-  m_PrefabInstance: {fileID: 843921207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589534341
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,11 +733,6 @@ RectTransform:
   m_AnchoredPosition: {x: 28.2449, y: 43.5248}
   m_SizeDelta: {x: 390.6458, y: 375.4248}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &635951089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1419240952366513760, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
-  m_PrefabInstance: {fileID: 843921207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &734445031
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Estas cerca...\n\xBFDeseas iniciar la Estaciones?"
+  m_text: "Estas cerca...\n\xBFDeseas iniciar la estacion?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
   m_sharedMaterial: {fileID: 5874003009630053954, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
@@ -1380,6 +1370,10 @@ PrefabInstance:
       propertyPath: _latitudeLongitude.Array.data[0]
       value: 4.721500201067544, -74.21941116444579
       objectReference: {fileID: 0}
+    - target: {fileID: 114668955501623132, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _useDeviceOrientation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1435,8 +1429,8 @@ MonoBehaviour:
   - 4.721508936328551, -74.21935638316491
   _spawnScale: 2
   _markerPrefab: {fileID: 7266971455667123862, guid: 324fc640127e6f240809fda20e87dd65, type: 3}
-  progressText: {fileID: 0}
-  Finally: {fileID: 0}
+  progressText: {fileID: 1375566811}
+  Finally: {fileID: 624407854}
 --- !u!4 &1133103895
 Transform:
   m_ObjectHideFlags: 0
@@ -2728,6 +2722,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467366628}
   m_CullTransparentMesh: 1
+--- !u!1 &1560598747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4508108683995210326, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+  m_PrefabInstance: {fileID: 843921207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1658818399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,6 +2860,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658818399}
   m_CullTransparentMesh: 1
+--- !u!1 &1795690163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2985229760101149104, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+  m_PrefabInstance: {fileID: 843921207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810172271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,8 +3177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6eb00655724ce40a58acd737703a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenCharacter: {fileID: 635951089}
-  WomenCharacter: {fileID: 529879327}
+  MenCharacter: {fileID: 1795690163}
+  WomenCharacter: {fileID: 1560598747}
   Men: 0
   Women: 0
 --- !u!1 &1962332871
