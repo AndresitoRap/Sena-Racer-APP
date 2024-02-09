@@ -1,4 +1,4 @@
-Library: C:\UNITY HUB PROJECTS\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+Library: C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-15
 --target=ARMV8A_AARCH64
@@ -12,10 +12,18 @@ Library: C:\UNITY HUB PROJECTS\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v
 --assembly-defines=glTFast;
 --assembly-defines=Google.XR.ARCoreExtensions;
 --assembly-defines=Google.XR.ARCoreExtensions.GeospatialCreator;
+--assembly-defines=Mapbox.IO.Compression;
+--assembly-defines=Mapbox.Json;
+--assembly-defines=Mapbox.VectorTile.ExtensionMethods;
+--assembly-defines=Mapbox.VectorTile.Geometry;
+--assembly-defines=Mapbox.VectorTile.PbfReader;
+--assembly-defines=Mapbox.VectorTile.VectorTileReader;
+--assembly-defines=MapboxAccountsUnity;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
 --assembly-defines=Newtonsoft.Json;
 --assembly-defines=ReadyPlayerMe.Core;
+--assembly-defines=ReadyPlayerMe.WebView;
 --assembly-defines=System.Configuration;
 --assembly-defines=System.Core;
 --assembly-defines=System.Data;
@@ -42,11 +50,14 @@ Library: C:\UNITY HUB PROJECTS\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.Management;
 --assembly-defines=UnityEngine;
+--assembly-defines=Vuforia.Unity.Engine;
+--assembly-defines=Vuforia.Unity.Wrapper;
+--assembly-defines=VuforiaScripts;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\UNITY HUB PROJECTS\Sena Racer\Temp\Burst
+--temp-folder=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=C:\UNITY HUB PROJECTS\Sena Racer\Library\Burst
---output=C:\UNITY HUB PROJECTS\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Library\Burst
+--output=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[GLTFast.Jobs.ConvertUVsFloatToFloatInterleavedJob, glTFast, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(GLTFast.Jobs.ConvertUVsFloatToFloatInterleavedJob&, glTFast, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5c7db452ab5796006eecfe194a0df4b9
