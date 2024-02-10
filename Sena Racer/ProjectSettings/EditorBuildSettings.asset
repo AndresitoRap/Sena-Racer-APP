@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Questions/Mauro/Result.unity
     guid: 747c8dcabb2f9c4429ce321dae18978d
+  - enabled: 1
+    path: Assets/Scenes/Vuforia/MauroVuforia.unity
+    guid: 78e7fa7e9235af347afa7393a805deb6
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e3859b6ae3a1497448df10bc54e02a21, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c42e91c6434da3a44811c9c47be0459e, type: 2}

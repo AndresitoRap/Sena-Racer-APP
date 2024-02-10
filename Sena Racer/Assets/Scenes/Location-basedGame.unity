@@ -1427,6 +1427,7 @@ MonoBehaviour:
   _map: {fileID: 843921209}
   _locationStrings:
   - 4.721508936328551, -74.21935638316491
+  - 4.721657547718422, -74.21964642912621
   _spawnScale: 2
   _markerPrefab: {fileID: 7266971455667123862, guid: 324fc640127e6f240809fda20e87dd65, type: 3}
   progressText: {fileID: 1375566811}

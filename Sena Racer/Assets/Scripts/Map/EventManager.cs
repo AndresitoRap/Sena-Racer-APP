@@ -29,11 +29,11 @@ public class EventManager : MonoBehaviour
             // Cargar la escena "FirstScene" cuando el identificador del evento es 1
             SceneManager.LoadScene("AndyVuforia");
         }
-        // else if (eventID == 2)
-        // {
-        //     // Cargar la escena "FirstScene" cuando el identificador del evento es 1
-        //     Debug.Log("Escena 2");
-        // }
+        else if (eventID == 2)
+        {
+            //Cargar la escena "FirstScene" cuando el identificador del evento es 2
+            SceneManager.LoadScene("MauroVuforia");
+        }
         // else if (eventID == 2)
         // {
         //     // Cargar la escena "SecondScene" cuando el identificador del evento es 2
