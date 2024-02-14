@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+
+public class Question : MonoBehaviour
+{
+    public TextMeshProUGUI textMeshPro;
+    public float typingSpeed = 0.1f;
+    private string fullText;
+
+    void Start()
+    {
+        // Obtiene el nombre de la escena activa
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // Selecciona la pregunta basándose en el nombre de la escena
+        if (sceneName == "AQuestion")
+        {
+            fullText = "Ya conociendo un poco más sobre nuestra magnifica institución... institución... ¿Podrías recordarme el nombre?";
+        }
+        else if (sceneName == "MQuestion")
+        {
+            fullText = "Ya conociendo un poco más sobre los porcinos... ¿Cuál de las siguientes afirmaciones sobre los porcinos es verdadera?";
+        }
+
+        StartCoroutine(TypeText());
+    }
+
+    IEnumerator TypeText()
+    {
+        foreach (char c in fullText)
+        {
+            textMeshPro.text += c;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+}

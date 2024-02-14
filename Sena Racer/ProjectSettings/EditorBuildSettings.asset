@@ -45,14 +45,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Vuforia/AndyVuforia.unity
     guid: 2e9bf4a115c242745abd8ea425adbec1
   - enabled: 1
-    path: Assets/Scenes/Questions/Mauro/MaoAsks.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Questions/Mauro/Result.unity
-    guid: 747c8dcabb2f9c4429ce321dae18978d
-  - enabled: 1
     path: Assets/Scenes/Vuforia/MauroVuforia.unity
     guid: 78e7fa7e9235af347afa7393a805deb6
+  - enabled: 1
+    path: Assets/Scenes/Questions/Mauro/MExplication.unity
+    guid: ed2871725f3bc6342944f1381ecd6c43
+  - enabled: 1
+    path: Assets/Scenes/Questions/Mauro/MQuestion.unity
+    guid: 0aafbdd5503fdd246b5ed4ba64bbd2ac
+  - enabled: 1
+    path: Assets/Scenes/Questions/Mauro/MResults.unity
+    guid: b4d526f53a4b90e44ae44cc12d4a6495
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e3859b6ae3a1497448df10bc54e02a21, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c42e91c6434da3a44811c9c47be0459e, type: 2}
