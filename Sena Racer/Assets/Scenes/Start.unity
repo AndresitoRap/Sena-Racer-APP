@@ -2436,7 +2436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1529216006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2484,8 +2484,8 @@ GameObject:
   - component: {fileID: 1569772449}
   - component: {fileID: 1569772455}
   - component: {fileID: 1569772452}
-  - component: {fileID: 1569772454}
-  - component: {fileID: 1569772453}
+  - component: {fileID: 1569772456}
+  - component: {fileID: 1569772457}
   m_Layer: 5
   m_Name: ARCanvas
   m_TagString: Untagged
@@ -2590,7 +2590,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AR: {fileID: 1529216005}
   NotAR: {fileID: 371189117}
---- !u!82 &1569772453
+--- !u!114 &1569772455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569772447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6eb00655724ce40a58acd737703a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenCharacter: {fileID: 399492482}
+  WomenCharacter: {fileID: 708037073}
+  Men: 0
+  Women: 0
+--- !u!114 &1569772456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569772447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41685465a62e6f4c9f7aadb8f22ae6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenCharacter: {fileID: 399492482}
+  WomenCharacter: {fileID: 708037073}
+  Men: 0
+  Women: 0
+  dialogueText: {fileID: 398250898}
+  audioSource: {fileID: 1569772457}
+  clipsMen:
+  - {fileID: 8300000, guid: d956fcc9d9d022b4398c924a7e2fd66b, type: 3}
+  - {fileID: 8300000, guid: b6705c7cc2ace00459d9967e03fad652, type: 3}
+  - {fileID: 8300000, guid: fbab1ddf67367ab4184bb70180da9468, type: 3}
+  - {fileID: 8300000, guid: 9d837ff483bed694c8b516b129a596fd, type: 3}
+  - {fileID: 8300000, guid: 39d9ee1d92b3aff4a88f194417c528d1, type: 3}
+  - {fileID: 8300000, guid: c6457da2a8e172c4ead0e74b4380144f, type: 3}
+  clipsWomen:
+  - {fileID: 8300000, guid: 443a18d0345ac6244ba27795eb1e3dd2, type: 3}
+  - {fileID: 8300000, guid: a15481b6dab91f14ca86e26e00d2a62f, type: 3}
+  - {fileID: 8300000, guid: bfc14c63b6db59844a1436c2609de8b1, type: 3}
+  - {fileID: 8300000, guid: d89589ac4882eac419668dd051804cfa, type: 3}
+  - {fileID: 8300000, guid: 05e26cacae4df1c4c8ecc37284b77ee8, type: 3}
+  - {fileID: 8300000, guid: a86843971e51f5542896a6749294e555, type: 3}
+  textSpeed: 0.3
+--- !u!82 &1569772457
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2686,55 +2735,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1569772454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569772447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8993efcb5b906b44b8e2b2ef624480e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenCharacter: {fileID: 399492482}
-  WomenCharacter: {fileID: 708037073}
-  Men: 0
-  Women: 0
-  dialogueText: {fileID: 398250898}
-  audioSource: {fileID: 1569772453}
-  clipsMen:
-  - {fileID: 8300000, guid: d956fcc9d9d022b4398c924a7e2fd66b, type: 3}
-  - {fileID: 8300000, guid: b6705c7cc2ace00459d9967e03fad652, type: 3}
-  - {fileID: 8300000, guid: fbab1ddf67367ab4184bb70180da9468, type: 3}
-  - {fileID: 8300000, guid: 9d837ff483bed694c8b516b129a596fd, type: 3}
-  - {fileID: 8300000, guid: 39d9ee1d92b3aff4a88f194417c528d1, type: 3}
-  - {fileID: 8300000, guid: c6457da2a8e172c4ead0e74b4380144f, type: 3}
-  clipsWomen:
-  - {fileID: 8300000, guid: 443a18d0345ac6244ba27795eb1e3dd2, type: 3}
-  - {fileID: 8300000, guid: a15481b6dab91f14ca86e26e00d2a62f, type: 3}
-  - {fileID: 8300000, guid: bfc14c63b6db59844a1436c2609de8b1, type: 3}
-  - {fileID: 8300000, guid: d89589ac4882eac419668dd051804cfa, type: 3}
-  - {fileID: 8300000, guid: 05e26cacae4df1c4c8ecc37284b77ee8, type: 3}
-  - {fileID: 8300000, guid: a86843971e51f5542896a6749294e555, type: 3}
-  textSpeed: 0.2
---- !u!114 &1569772455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569772447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6eb00655724ce40a58acd737703a4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenCharacter: {fileID: 399492482}
-  WomenCharacter: {fileID: 708037073}
-  Men: 0
-  Women: 0
 --- !u!4 &1880177277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 31552ee453defdb4ebb37861c02fe856, type: 3}

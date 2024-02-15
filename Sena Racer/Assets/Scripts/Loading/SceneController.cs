@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     public TMP_Text textProgress;
     public Slider sliderProgress;
     public float currentPercent;
-    private float loadingTime = 3.0f;
+    private float loadingTime = 5.0f;
 
     void Start() {
         StartCoroutine(LoadScene("Location-basedGame"));

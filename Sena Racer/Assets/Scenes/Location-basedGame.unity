@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220223456}
-        m_TargetAssemblyTypeName: ChangeSceneRA, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1220223458}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220223456}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChangeSceneRA, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -885,8 +885,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: f2a6e75dc73334f4786ba48ca1fd4efb, type: 3}
     - target: {fileID: 114171432499867028, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171432499867028, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 14
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 114171432499867028, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_FontData.m_FontStyle
@@ -895,17 +899,25 @@ PrefabInstance:
     - target: {fileID: 114603753021256032, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_Text
       value: "<b>Recuerda lo que debes hacer</b>\n\nDebes estar cerca a las estaciones
-        flotantes en el mapa, presionalos y comenzaras con el evento, de lo contrario
-        deberas acercarte\n\ncada que termines una estaci\xF3n, el progreso subiera
-        , cuando el progreso este completo te diremos...\n\n\xA1\xA1Buena Suerte!!\n"
+        en el mapa, presionalos y comenzaras con el evento, de lo contrario deberas
+        acercarte.\n\nCuando la completes, el progreso subira, cuando el progreso
+        este completo veras una sorpresa...\n\n\xA1\xA1Buena Suerte!!\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114603753021256032, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: f2a6e75dc73334f4786ba48ca1fd4efb, type: 3}
     - target: {fileID: 114603753021256032, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114603753021256032, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114603753021256032, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 11
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114731470950229392, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_Size
@@ -929,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 114905903597709784, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_Color.a
-      value: 0.8235294
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 114905903597709784, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_Color.b
@@ -949,7 +961,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224008758809847412, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 248.6228
+      value: 333.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 224008758809847412, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 224008758809847412, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224315790701160254, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_Pivot.x
@@ -1024,8 +1044,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224518340005525372, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 333.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 224518340005525372, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 174.8487
+      value: 272.0486
       objectReference: {fileID: 0}
     - target: {fileID: 224518340005525372, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1085,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224907856650798614, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224907993215804030, guid: 98be219873e6d4dffb5949746f515a33, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1305,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _imagery._layerProperty.sourceType
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _vectorData._layerProperty._sourceType
@@ -1321,7 +1345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _imagery._layerProperty.sourceOptions.layerSource.Id
-      value: mapbox://styles/mapbox/dark-v9
+      value: mapbox.satellite
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _vectorData._layerProperty.sourceOptions.layerSource.Id
@@ -1563,7 +1587,7 @@ MonoBehaviour:
   _locationStrings:
   - 4.7029595896216225, -74.21541541250147
   - 4.702944978961328, -74.21548258151054
-  _spawnScale: 2
+  _spawnScale: 3
   _markerPrefab: {fileID: 7266971455667123862, guid: 324fc640127e6f240809fda20e87dd65, type: 3}
   progressText: {fileID: 1375566811}
   Finally: {fileID: 624407854}
@@ -1998,8 +2022,9 @@ GameObject:
   - component: {fileID: 1220223452}
   - component: {fileID: 1220223453}
   - component: {fileID: 1220223455}
-  - component: {fileID: 1220223456}
   - component: {fileID: 1220223457}
+  - component: {fileID: 1220223458}
+  - component: {fileID: 1220223459}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2222,18 +2247,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1220223456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220223447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 681573d073a498347ae5dbb0d8d2932b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1220223457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,6 +2261,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressText: {fileID: 1375566811}
   Finally: {fileID: 624407854}
+--- !u!114 &1220223458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220223447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f1d1f7f7f0dad4daf701097b97a6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1220223459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220223447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6eb00655724ce40a58acd737703a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenCharacter: {fileID: 1795690163}
+  WomenCharacter: {fileID: 1560598747}
+  Men: 0
+  Women: 0
 --- !u!1 &1238235125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,54 +3312,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839007558}
   m_CullTransparentMesh: 1
---- !u!1 &1860125967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1860125969}
-  - component: {fileID: 1860125970}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1860125969
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860125967}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 475.44177, y: 875.8137, z: 133.22424}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1860125970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860125967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6eb00655724ce40a58acd737703a4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenCharacter: {fileID: 1795690163}
-  WomenCharacter: {fileID: 1560598747}
-  Men: 0
-  Women: 0
 --- !u!1 &1962332871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,5 +3480,4 @@ SceneRoots:
   - {fileID: 1188978836}
   - {fileID: 773682131}
   - {fileID: 1133103895}
-  - {fileID: 1860125969}
   - {fileID: 613864759}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 683091019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 681573d073a498347ae5dbb0d8d2932b, type: 3}
+  m_Script: {fileID: 11500000, guid: 90f1d1f7f7f0dad4daf701097b97a6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &691323907
@@ -1556,9 +1556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 4.695618152675519
-  _longitude: -74.21689200728777
-  _altitude: 2569.040044467896
+  _latitude: 4.695618152805206
+  _longitude: -74.216892007311
+  _altitude: 2569.0399687159806
   _altitudeType: 0
   _useEditorAltitudeOverride: 0
   _editorAltitudeOverride: 0
@@ -1727,8 +1727,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 683091024}
-        m_TargetAssemblyTypeName: ChangeSceneRA, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
