@@ -7,6 +7,6 @@ public class LoadSceneMaoask : MonoBehaviour
     private void OnMouseDown()
     {
         // Cambia a la escena "MaoAsks"
-        SceneManager.LoadScene("MExplication");
+        SceneManager.LoadScene("MExplicationPorcinos");
     }
 }

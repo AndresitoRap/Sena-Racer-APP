@@ -1124,8 +1124,9 @@ MonoBehaviour:
   - {fileID: 7904928752167724989, guid: 0e64c931315666c47881f8e5f6473535, type: 3}
   - {fileID: 2781126691468445904, guid: 3a0ee8b03d9d5d9409169faf16f04e46, type: 3}
   - {fileID: 3083926967756006280, guid: 9c52250d699521249b0c45f505c461ab, type: 3}
-  - {fileID: 5697164811101543070, guid: 9c3577c3ff2b2804c8d8f92f137bfb80, type: 3}
-  - {fileID: 6065871948344823152, guid: cd7b74ac626c7904bb70c4ede30e7bb0, type: 3}
+  - {fileID: 79292098928880948, guid: 3081c685842e663449801f88e3b7ed39, type: 3}
+  - {fileID: 6920981990811130807, guid: cd7b74ac626c7904bb70c4ede30e7bb0, type: 3}
+  - {fileID: 4668751065112787180, guid: 52cb4755452ed0542811ed7c7d272e2a, type: 3}
 --- !u!1 &782365343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,15 +1468,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -140.8
+      value: -231.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2140.4
+      value: 2166.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -943.6
+      value: -923.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1556,9 +1557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 4.694612422014033
-  _longitude: -74.21658112203396
-  _altitude: 2540.4716927623376
+  _latitude: 4.6947977637826614
+  _longitude: -74.21739468099983
+  _altitude: 2566.871451785788
   _altitudeType: 0
   _useEditorAltitudeOverride: 0
   _editorAltitudeOverride: 0
@@ -2264,7 +2265,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 100
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5

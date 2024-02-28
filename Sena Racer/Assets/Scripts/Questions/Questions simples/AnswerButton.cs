@@ -50,6 +50,13 @@ public class AnswerButton : MonoBehaviour
                 // Agrega más preguntas para la escena "MQuestion"
             }
         },
+        {
+            "Question", new QuestionDataMao[]
+            {
+                new QuestionDataMao("¿Cuáles curiosidades son correctas?", new string[] { "Son timidos y saltarines", "Son limpios y se comen sus heces", "Miden 2 metros y son dormilones", "Son veloces y comen carne" }, "Son limpios y se comen sus heces"),
+                // Agrega más preguntas para la escena "MQuestion"
+            }
+        },
         // Agrega más escenas y sus preguntas
     };
 
@@ -240,6 +247,14 @@ public class AnswerButton : MonoBehaviour
             PlayerPrefs.Save();
 
             SceneManager.LoadScene("MResultsBee");
+        }
+        else if (sceneName == "Question")
+        {
+            PlayerPrefs.SetInt("ScoreXim", score);
+            PlayerPrefs.SetFloat("TimeXim", timer);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("Results");
         }
     }
 

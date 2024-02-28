@@ -21,13 +21,16 @@ public class Explication : MonoBehaviour
         {
             fullText = "El Servicio Nacional de Aprendizaje es un establecimiento público de educación en Colombia que ofrece formación gratuita con programas técnicos, tecnológicos y complementarios.";
             nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("AQuestion"));
+            StartCoroutine(TypeText());
         }
-        else if (sceneName == "MExplication")
+        else if (sceneName == "MExplicationBee")
         {
             fullText = "Las abejas son conocidas por su papel en la polinización y por producir miel y cera. Sin embargo, no tienen un impacto directo en la mejora de la calidad del aire.";
-            nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("MQuestion"));
+            nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("MQuestionBee"));
+            StartCoroutine(TypeText());
         }
-        else if(sceneName == "MExplicationPorcinos")
+
+        else if (sceneName == "MExplicationPorcinos")
         {
             StartCoroutine(ShowTexts());
         }
@@ -38,24 +41,28 @@ public class Explication : MonoBehaviour
     }
 
     IEnumerator ShowTexts()
-{
-    // Muestra el primer texto
-    fullText = "Los porcinos, también conocidos como cerdos, son una subespecie de mamífero que fueron domesticados hace unos 13,000 años en el Oriente Próximo y en China. Son omnívoros y conocidos por su rápido crecimiento, lo que los hace populares para la crianza con fines cárnicos.";
-    yield return StartCoroutine(TypeText());
+    {
+        // Muestra el primer texto
+        fullText = "Los porcinos, también conocidos como cerdos, son una subespecie de mamífero que fueron domesticados hace unos 13,000 años en el Oriente Próximo y en China. Son omnívoros y conocidos por su rápido crecimiento, lo que los hace populares para la crianza con fines cárnicos.";
+        yield return StartCoroutine(TypeText());
 
-    // Espera 5 segundos (o el tiempo que quieras)
-    yield return new WaitForSeconds(1);
+        // Espera 5 segundos (o el tiempo que quieras)
+        yield return new WaitForSeconds(1);
 
-    // Limpia el texto existente
-    textMeshPro.text = "";
+        // Limpia el texto existente
+        textMeshPro.text = "";
 
-    // Muestra el segundo texto
-    fullText = "En este juego desliza todas las tarjetas. Si deslizas la correcta a la derecha, ganas. Pero si deslizas una incorrecta antes de terminar, el juego no será válido y se reiniciará una vez que todas las tarjetas hayan sido movidas.";
-    yield return StartCoroutine(TypeText());
+        // Muestra el segundo texto
+        fullText = "En este juego desliza todas las tarjetas. Si deslizas la correcta a la derecha, ganas. Pero si deslizas una incorrecta antes de terminar, el juego no será válido y se reiniciará una vez que todas las tarjetas hayan sido movidas.";
+        yield return StartCoroutine(TypeText());
 
-    // Después de que se haya completado la escritura del segundo texto, activa el botón
-    nextSceneButton.gameObject.SetActive(true);
-}
+        // Después de que se haya completado la escritura del segundo texto, activa el botón
+        nextSceneButton.gameObject.SetActive(true);
+
+        // Agrega una acción al botón para cargar la siguiente escena
+        nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("MaoAsks"));
+    }
+
 
 
     IEnumerator TypeText()

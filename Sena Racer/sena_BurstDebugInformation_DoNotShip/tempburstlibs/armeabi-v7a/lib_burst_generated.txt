@@ -1,4 +1,4 @@
-Library: C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: C:\Programacion\UnityHub\Trabajos\Sena Racer\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-15
 --target=ARMV7A_NEON32
@@ -54,10 +54,10 @@ Library: C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\BurstOutput\tempburstl
 --assembly-defines=Vuforia.Unity.Wrapper;
 --assembly-defines=VuforiaScripts;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\Burst
---key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Library\Burst
---output=C:\UNITY HUB PROJECTS\Sena-Racer\Sena Racer\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--temp-folder=C:\Programacion\UnityHub\Trabajos\Sena Racer\Temp\Burst
+--key-folder=C:/Programacion/UnityHub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Programacion\UnityHub\Trabajos\Sena Racer\Library\Burst
+--output=C:\Programacion\UnityHub\Trabajos\Sena Racer\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[GLTFast.Jobs.ConvertUVsFloatToFloatInterleavedJob, glTFast, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(GLTFast.Jobs.ConvertUVsFloatToFloatInterleavedJob&, glTFast, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5c7db452ab5796006eecfe194a0df4b9
