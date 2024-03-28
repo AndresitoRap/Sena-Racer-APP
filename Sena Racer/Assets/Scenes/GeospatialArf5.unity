@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1114bd37d249b08c83cfbaf234679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SessionOrigin: {fileID: 691323908}
+  Origin: {fileID: 0}
   Session: {fileID: 193207847}
   AnchorManager: {fileID: 691323910}
   RaycastManager: {fileID: 691323913}
@@ -1468,15 +1468,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -231.1
+      value: 103.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2166.8
+      value: 2170.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -923.1
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1557,9 +1557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 4.6947977637826614
-  _longitude: -74.21739468099983
-  _altitude: 2566.871451785788
+  _latitude: 4.7032378754269155
+  _longitude: -74.21438187119719
+  _altitude: 2570.3008938562125
   _altitudeType: 0
   _useEditorAltitudeOverride: 0
   _editorAltitudeOverride: 0
@@ -2521,7 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  SessionOrigin: {fileID: 691323908}
+  Origin: {fileID: 691323908}
   CameraManager: {fileID: 1451910693}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}
