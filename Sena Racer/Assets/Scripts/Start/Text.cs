@@ -44,6 +44,7 @@ public class Text : MonoBehaviour
     // Booleanos que controlan la reproducción de audio y si el texto se ha mostrado completamente
     private bool audioPlaying = false;
     private bool textFullyDisplayed = false;
+    
 
     // Método llamado al inicio de la ejecución del script
     void Start()
@@ -133,7 +134,7 @@ public class Text : MonoBehaviour
         else
         {
             // Si se ha llegado al final del diálogo, desactiva el objeto y carga la escena
-            gameObject.SetActive(false);
+            
             SceneManager.LoadScene("Loading");
         }
     }

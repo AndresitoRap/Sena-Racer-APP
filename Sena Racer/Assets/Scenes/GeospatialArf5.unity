@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1114bd37d249b08c83cfbaf234679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Origin: {fileID: 0}
+  SessionOrigin: {fileID: 0}
   Session: {fileID: 193207847}
   AnchorManager: {fileID: 691323910}
   RaycastManager: {fileID: 691323913}
@@ -1124,8 +1124,8 @@ MonoBehaviour:
   - {fileID: 7904928752167724989, guid: 0e64c931315666c47881f8e5f6473535, type: 3}
   - {fileID: 2781126691468445904, guid: 3a0ee8b03d9d5d9409169faf16f04e46, type: 3}
   - {fileID: 3083926967756006280, guid: 9c52250d699521249b0c45f505c461ab, type: 3}
-  - {fileID: 79292098928880948, guid: 3081c685842e663449801f88e3b7ed39, type: 3}
-  - {fileID: 6920981990811130807, guid: cd7b74ac626c7904bb70c4ede30e7bb0, type: 3}
+  - {fileID: 6890669619994600011, guid: a793a3fdd7339a742aee1fbf6a5baf53, type: 3}
+  - {fileID: 2312728322805765261, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
   - {fileID: 4668751065112787180, guid: 52cb4755452ed0542811ed7c7d272e2a, type: 3}
 --- !u!1 &782365343
 GameObject:
@@ -1292,6 +1292,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827461619}
   m_CullTransparentMesh: 0
+--- !u!1 &951207786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951207788}
+  - component: {fileID: 951207787}
+  m_Layer: 0
+  m_Name: LineRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951207787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951207786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412741e52883d904abdafd97c1d883af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1045797387}
+  lineColor: {r: 0, g: 0, b: 1, a: 1}
+--- !u!4 &951207788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951207786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5341425, y: -0.047845364, z: -27.7762}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021696528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,15 +1514,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.3
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2170.3
+      value: 2172.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.6
+      value: -15.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1557,14 +1603,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: NaN
-  _latitude: 4.7032378754269155
-  _longitude: -74.21438187119719
-  _altitude: 2570.3008938562125
+  _latitude: 4.703003755183645
+  _longitude: -74.21525310635381
+  _altitude: 2572.5000218804926
   _altitudeType: 0
   _useEditorAltitudeOverride: 0
   _editorAltitudeOverride: 0
   _anchorManager: {fileID: 691323910}
   Origin: {fileID: 1404160835}
+--- !u!4 &1045797387 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3edf9e08525079e4b8d5994c36617d8a, type: 3}
+  m_PrefabInstance: {fileID: 1045797384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1074335149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,7 +2572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Session: {fileID: 193207847}
-  Origin: {fileID: 691323908}
+  SessionOrigin: {fileID: 0}
   CameraManager: {fileID: 1451910693}
   ARCoreExtensionsConfig: {fileID: 11400000, guid: c109cc0d42e3648dca906c2cccaaa763, type: 2}
   CameraConfigFilter: {fileID: 0}
@@ -3164,3 +3215,4 @@ SceneRoots:
   - {fileID: 384014292}
   - {fileID: 1404160837}
   - {fileID: 1045797384}
+  - {fileID: 951207788}

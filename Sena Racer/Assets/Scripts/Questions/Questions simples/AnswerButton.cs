@@ -39,24 +39,31 @@ public class AnswerButton : MonoBehaviour
         {
             "AQuestion", new QuestionDataMao[]
             {
-                new QuestionDataMao("¿Cúal es el nombre de nuestra institución?", new string[] { "Servicio Nacional de Aprendizaje", "Servicio de Negocios de Aprendizaje", "Sistema Nacional de Aprendizaje", "Servicio Internacional de Aprendizaje" }, "Servicio Nacional de Aprendizaje"),
+                new("¿Cúal es el nombre de nuestra institución?", new string[] { "Servicio Nacional de Aprendizaje", "Servicio de Negocios de Aprendizaje", "Sistema Nacional de Aprendizaje", "Servicio Internacional de Aprendizaje" }, "Servicio Nacional de Aprendizaje"),
                 // Agrega más preguntas para la escena "AQuestion"
             }
         },
         {
             "MQuestionBee", new QuestionDataMao[]
             {
-                new QuestionDataMao("¿Cuál de los siguientes NO es un beneficio de la apicultura?", new string[] { "Polinización de cultivos", "Producción de miel", "Mejora de la calidad del aire", "Producción de cera de abejas" }, "Mejora de la calidad del aire"),
+                new("¿Cuál de los siguientes NO es un beneficio de la apicultura?", new string[] { "Polinización de cultivos", "Producción de miel", "Mejora de la calidad del aire", "Producción de cera de abejas" }, "Mejora de la calidad del aire"),
                 // Agrega más preguntas para la escena "MQuestion"
             }
         },
         {
-            "Question", new QuestionDataMao[]
+            "XQuestion", new QuestionDataMao[]
             {
-                new QuestionDataMao("¿Cuáles curiosidades son correctas?", new string[] { "Son timidos y saltarines", "Son limpios y se comen sus heces", "Miden 2 metros y son dormilones", "Son veloces y comen carne" }, "Son limpios y se comen sus heces"),
+                new("¿Cuáles curiosidades son correctas?", new string[] { "Son timidos y saltarines", "Son limpios y se comen sus heces", "Miden 2 metros y son dormilones", "Son veloces y comen carne" }, "Son limpios y se comen sus heces"),
                 // Agrega más preguntas para la escena "MQuestion"
             }
         },
+        {
+          "DQuestion", new QuestionDataMao[]
+            {
+                new QuestionDataMao("¿A que especie cientifica pertenecen las vacas?", new string[] { "Anatinade", "Gallus", "Bovidae", "Bos Taurus" }, "Bos Taurus"),
+                // Agrega más preguntas para la escena "AQuestion"
+            }
+        }
         // Agrega más escenas y sus preguntas
     };
 
@@ -248,13 +255,22 @@ public class AnswerButton : MonoBehaviour
 
             SceneManager.LoadScene("MResultsBee");
         }
-        else if (sceneName == "Question")
+        else if (sceneName == "DQuestion")
+        {
+            PlayerPrefs.SetInt("ScoreDiego", score);
+            PlayerPrefs.SetFloat("TimeDiego", timer);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("DResults");
+        }
+
+        else if (sceneName == "XQuestion")
         {
             PlayerPrefs.SetInt("ScoreXim", score);
             PlayerPrefs.SetFloat("TimeXim", timer);
             PlayerPrefs.Save();
 
-            SceneManager.LoadScene("Results");
+            SceneManager.LoadScene("XResults");
         }
     }
 

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -17,10 +18,22 @@ public class Explication : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
 
         // Selecciona el texto y la siguiente escena basándose en el nombre de la escena
-        if (sceneName == "AExplication")
+        if (sceneName == "XExplication")
+        {
+            fullText = "Los conejos son animalitos muy curiosos, se comen sus heces, son aventureros, son muy limpios, comen zanahorias y muchas más";
+            nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("XQuestion"));
+            StartCoroutine(TypeText());
+        }
+        else if (sceneName == "AExplication")
         {
             fullText = "El Servicio Nacional de Aprendizaje es un establecimiento público de educación en Colombia que ofrece formación gratuita con programas técnicos, tecnológicos y complementarios.";
             nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("AQuestion"));
+            StartCoroutine(TypeText());
+        }
+        else if (sceneName == "DExplication")
+        {
+            fullText = "Las vacas son mamíferos rumiantes domesticados, que pertenecen a la especie Bos taurus. Son una de las especies de ganado más comunes en todo el mundo y han sido criadas por humanos durante miles de años por su carne, leche, cuero y otros subproductos.";
+            nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("DQuestion"));
             StartCoroutine(TypeText());
         }
         else if (sceneName == "MExplicationBee")
@@ -61,8 +74,8 @@ public class Explication : MonoBehaviour
 
         // Agrega una acción al botón para cargar la siguiente escena
         nextSceneButton.onClick.AddListener(() => SceneManager.LoadScene("MaoAsks"));
-    }
 
+    }
 
 
     IEnumerator TypeText()

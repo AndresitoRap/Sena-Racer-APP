@@ -24,6 +24,15 @@ public class Question : MonoBehaviour
         {
             fullText = "Ya conociendo un poco más sobre la apicultura... ¿Cuál de los siguientes NO es un beneficio de la apicultura?";
         }
+        if (sceneName == "XQuestion")
+        {
+            fullText = "Recuerda responder en el menor tiempo posible para obtener más puntos ¡Suerte!";
+        }
+        else if (sceneName == "DQuestion")
+        {
+            fullText = "Teniendo en cuenta la anterior información, responde la pregunta";
+        }
+
 
         StartCoroutine(TypeText());
     }

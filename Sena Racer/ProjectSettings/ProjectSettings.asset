@@ -850,7 +850,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: ARCORE_INTERNAL_GEOSPATIAL_CREATOR_ENABLED;READY_PLAYER_ME;ARCORE_USE_ARF_5
+    Android: ARCORE_INTERNAL_GEOSPATIAL_CREATOR_ENABLED;READY_PLAYER_ME
     EmbeddedLinux: READY_PLAYER_ME
     GameCoreScarlett: READY_PLAYER_ME
     GameCoreXboxOne: READY_PLAYER_ME

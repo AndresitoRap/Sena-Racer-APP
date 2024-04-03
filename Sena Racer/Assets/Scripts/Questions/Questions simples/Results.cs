@@ -24,19 +24,31 @@ public class Results : MonoBehaviour
         finalScore = PlayerPrefs.GetInt("ScoreAndy", 0);
         timeScore = PlayerPrefs.GetFloat("TimeAndy", 0);
     }
-    else if (sceneName == "MResultsBee") // Añade esta condición
+    if (sceneName == "DResults")
+    {
+            finalScore = PlayerPrefs.GetInt("ScoreDiego", 0);
+            timeScore = PlayerPrefs.GetFloat("TimeDiego", 0);
+    }
+        else if (sceneName == "MResultsBee") // Añade esta condición
     {
         finalScore = PlayerPrefs.GetInt("ScoreBee", 0);
         timeScore = PlayerPrefs.GetFloat("TimeBee", 0);
     }
-    else if (sceneName == "MResultsporcinos")
+    else if (sceneName == "XResults") // Añade esta condición
+    {
+        finalScore = PlayerPrefs.GetInt("ScoreXim", 0);
+        timeScore = PlayerPrefs.GetFloat("TimeXim", 0);
+    }
+    
+        else if (sceneName == "MResultsporcinos")
     {
        finalScore = SwipeEffect.score; // Obtiene la puntuación de SwipeEffect
         timeScore = SwipeEffect.finalTime; // Obtiene el tiempo final de SwipeEffect 
     }
+    
 
-    // Muestra la puntuación y el tiempo en los componentes de texto
-    scoreText.text = "Puntuación Final: " + finalScore.ToString();
+        // Muestra la puntuación y el tiempo en los componentes de texto
+        scoreText.text = "Puntuación Final: " + finalScore.ToString();
     timeText.text = "Tiempo Final: " + timeScore.ToString("F0");
 }
 
