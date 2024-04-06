@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 70081671}
   - component: {fileID: 70081674}
   - component: {fileID: 70081673}
-  - component: {fileID: 70081672}
+  - component: {fileID: 70081675}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -158,25 +158,6 @@ Transform:
   - {fileID: 1554072890}
   m_Father: {fileID: 1356298908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70081672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70081670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 70081674}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: QR Cerdo
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 70081674}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &70081673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,18 +217,37 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: QR Cerdo
+  mTrackableName: QR conejos
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 9298940377514424f819aaf4c208415f, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 9d06786cf2e02d9499b34c8f7525bab9, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 70081672}
+  mPreview: {fileID: 70081675}
+--- !u!114 &70081675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70081670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 70081674}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: QR conejos
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 70081674}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &72505010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,9 +1506,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2781126691468445904, guid: 3a0ee8b03d9d5d9409169faf16f04e46, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1554072893}
-    - targetCorrespondingSourceObject: {fileID: 2781126691468445904, guid: 3a0ee8b03d9d5d9409169faf16f04e46, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1554072892}
   m_SourcePrefab: {fileID: 100100000, guid: 3a0ee8b03d9d5d9409169faf16f04e46, type: 3}
 --- !u!4 &1554072890 stripped
@@ -1542,19 +1539,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1554072893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554072891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d937f93f7d7e3464686f90285fdb50c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: XExplication
 --- !u!1 &1555841007
 GameObject:
   m_ObjectHideFlags: 0

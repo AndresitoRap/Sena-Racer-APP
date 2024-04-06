@@ -573,7 +573,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
             UpdateDebugInfo();
 
             // Check session error status.
-            LifecycleUpdate();
+            //LifecycleUpdate();
             if (_isReturning)
             {
                 return;
@@ -1414,7 +1414,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
                     "Geospatial sample failed due to missing AR Components.");
             }
 
-            ReturnWithReason(returningReason);
+            //ReturnWithReason(returningReason);
         }
 
         private void ReturnWithReason(string reason)
@@ -1424,7 +1424,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
                 return;
             }
 
-            GeometryToggle.gameObject.SetActive(false);
+            //GeometryToggle.gameObject.SetActive(false);
             AnchorSettingButton.gameObject.SetActive(false);
             AnchorSettingPanel.gameObject.SetActive(false);
             GeospatialAnchorToggle.gameObject.SetActive(false);
@@ -1485,7 +1485,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
         /// Generates the placed anchor failure string for the UI display.
         /// </summary>
         /// <returns> The string for the UI display for a failed anchor placement.</returns>
-         private string GetDisplayStringForAnchorPlacedFailure()
+        private string GetDisplayStringForAnchorPlacedFailure()
         {
             return string.Format(
                     "Failed to set a {0} anchor!", _anchorType);
