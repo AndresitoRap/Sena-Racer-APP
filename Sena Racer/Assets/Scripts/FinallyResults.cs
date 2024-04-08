@@ -9,10 +9,14 @@ public class FinallyResults : MonoBehaviour
 {
     public TMP_Text TotalScore;
     public TMP_Text TotalTime;
-    public TMP_Text Rank;
 
     // Start is called before the first frame update
     void Start()
+    {
+        InvokeRepeating("UpdateData", 0f, 300f);
+    }
+
+    void UpdateData()
     {
         StartCoroutine(GetUserData());
     }
@@ -35,14 +39,22 @@ public class FinallyResults : MonoBehaviour
             int totalScore = int.Parse(runnerData.data.attributes.score1) + int.Parse(runnerData.data.attributes.score2) + int.Parse(runnerData.data.attributes.score3) + int.Parse(runnerData.data.attributes.score4) + int.Parse(runnerData.data.attributes.score5);
             float totalTime = runnerData.data.attributes.time1 + runnerData.data.attributes.time2 + runnerData.data.attributes.time3 + runnerData.data.attributes.time4 + runnerData.data.attributes.time5;
 
-            StartCoroutine(GetAllRunnersData(totalScore, totalTime));
+            StartCoroutine(UpdateTotalScoreAndTime(Login.corridorID, totalScore, totalTime));
         }
     }
 
-    IEnumerator GetAllRunnersData(int userScore, float userTime)
+    IEnumerator UpdateTotalScoreAndTime(string runnerID, int totalScore, float totalTime)
     {
-        string url = "https://backend-strapi-senaracer.onrender.com/api/runners";
-        UnityWebRequest www = UnityWebRequest.Get(url);
+        string url = "https://backend-strapi-senaracer.onrender.com/api/runners/" + runnerID;
+
+        string json = "{\"data\": {\"totalScore\":\"" + totalScore + "\",\"totalTime\":" + totalTime + "}}";
+
+        UnityWebRequest www = new UnityWebRequest(url, "PUT");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        www.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        www.downloadHandler = new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
+
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
@@ -51,28 +63,8 @@ public class FinallyResults : MonoBehaviour
         }
         else
         {
-            string json = www.downloadHandler.text;
-            AllRunnersData allRunnersData = JsonUtility.FromJson<AllRunnersData>(json);
-
-            if (allRunnersData != null && allRunnersData.data != null)
-            {
-                int userRank = 1;
-                foreach (RunnerData runnerData in allRunnersData.data)
-                {
-                    if (runnerData != null && runnerData.data != null && runnerData.data.attributes != null)
-                    {
-                        int totalScore = int.Parse(runnerData.data.attributes.score1) + int.Parse(runnerData.data.attributes.score2) + int.Parse(runnerData.data.attributes.score3) + int.Parse(runnerData.data.attributes.score4) + int.Parse(runnerData.data.attributes.score5);
-                        if (totalScore > userScore)
-                        {
-                            userRank++;
-                        }
-                    }
-                }
-
-                TotalScore.text = userScore.ToString() + "Pts";
-                TotalTime.text =   userTime.ToString("F0") + "s";
-                Rank.text = userRank + " de " + allRunnersData.data.Count;
-            }
+            TotalScore.text = totalScore.ToString() + "Pts";
+            TotalTime.text = totalTime.ToString("F0") + "s";
         }
     }
 }
@@ -97,15 +89,11 @@ public class Attributes
     public string score3;
     public string score4;
     public string score5;
+    public string totalScore;
     public float time1;
     public float time2;
     public float time3;
     public float time4;
     public float time5;
-}
-
-[System.Serializable]
-public class AllRunnersData
-{
-    public List<RunnerData> data;
+    public float totalTime;
 }
