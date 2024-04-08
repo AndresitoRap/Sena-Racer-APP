@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -11,14 +10,15 @@ public class Login : MonoBehaviour
     public TMP_InputField ID;
     public TMP_InputField Password;
     public TMP_Text MessageError;
-    public Image ErrorMessageImage; // Referencia a la imagen del mensaje de error
-    public GameObject loadingPanel; // Referencia al panel de carga en tu Canvas
-    public Button StartButton; // Botón para iniciar sesión
-    public Button ShowPasswordButton; // Botón para mostrar la contraseña
-    public Sprite EyeOpen; // Icono del ojo abierto
-    public Sprite EyeClosed; // Icono del ojo cerrado
+    public Image ErrorMessageImage;
+    public GameObject loadingPanel;
+    public Button StartButton;
+    public Button ShowPasswordButton;
+    public Sprite EyeOpen;
+    public Sprite EyeClosed;
 
-    private bool isPasswordShown = false; // Variable para rastrear si la contraseña se está mostrando o no
+    private bool isPasswordShown = false;
+    public static string corridorID; // Variable estática para guardar el ID del corredor
     string url = "https://backend-strapi-senaracer.onrender.com/api/runners";
 
     [System.Serializable]
@@ -31,6 +31,7 @@ public class Login : MonoBehaviour
     [System.Serializable]
     public class Runner
     {
+        public int id;
         public RunnerAttributes attributes;
     }
 
@@ -42,9 +43,9 @@ public class Login : MonoBehaviour
 
     private void Start()
     {
-        StartButton.onClick.AddListener(Log_In); // Añade el listener al botón Start
+        StartButton.onClick.AddListener(Log_In);
         ShowPasswordButton.onClick.AddListener(TogglePasswordVisibility);
-        loadingPanel.SetActive(false); // Desactiva el panel de carga al iniciar
+        loadingPanel.SetActive(false);
     }
 
     public void Log_In()
@@ -67,16 +68,13 @@ public class Login : MonoBehaviour
         StartButton.interactable = false;
         ShowPasswordButton.interactable = false;
 
-        // Activa el panel de carga antes de enviar la solicitud
         loadingPanel.SetActive(true);
 
         UnityWebRequest request = UnityWebRequest.Get(url);
         yield return request.SendWebRequest();
 
-        // Desactiva el panel de carga después de recibir la respuesta
         loadingPanel.SetActive(false);
 
-        // Reactivar inputs y botones al finalizar la verificación
         ID.interactable = true;
         Password.interactable = true;
         StartButton.interactable = true;
@@ -84,24 +82,22 @@ public class Login : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.Success && request.downloadHandler.text != null)
         {
-            // Parsea el JSON a un objeto que contiene un array de objetos Runner
             RunnerData runnerData = JsonUtility.FromJson<RunnerData>(request.downloadHandler.text);
 
-            // Busca en el array de corredores el que tiene la identificación y contraseña correctas
             if (runnerData != null && runnerData.data != null)
             {
                 foreach (Runner runner in runnerData.data)
                 {
                     if (runner.attributes.identification == identificationInput && runner.attributes.password == passwordInput)
                     {
-                        // Si los datos son correctos, cambia a la escena "Welcome"
+                        corridorID = runner.id.ToString();
+                        Debug.Log("ID del corredor: " + corridorID);
                         SceneManager.LoadScene("Welcome");
                         yield break;
                     }
                 }
             }
 
-            // Si llegamos aquí, significa que no encontramos un corredor con la identificación y contraseña correctas
             ShowErrorMessage("Los datos ingresados no son correctos.");
             StartCoroutine(HideErrorMessage());
         }
@@ -130,7 +126,6 @@ public class Login : MonoBehaviour
         ErrorMessageImage.gameObject.SetActive(false);
     }
 
-    // Método para mostrar y ocultar la contraseña
     private void TogglePasswordVisibility()
     {
         isPasswordShown = !isPasswordShown;
@@ -138,12 +133,12 @@ public class Login : MonoBehaviour
         if (isPasswordShown)
         {
             Password.contentType = TMP_InputField.ContentType.Standard;
-            ShowPasswordButton.image.sprite = EyeOpen; // Cambia el icono a ojo abierto
+            ShowPasswordButton.image.sprite = EyeOpen;
         }
         else
         {
             Password.contentType = TMP_InputField.ContentType.Password;
-            ShowPasswordButton.image.sprite = EyeClosed; // Cambia el icono a ojo cerrado
+            ShowPasswordButton.image.sprite = EyeClosed;
         }
 
         Password.ForceLabelUpdate();

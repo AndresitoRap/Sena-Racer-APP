@@ -27,7 +27,17 @@ public class EventManager : MonoBehaviour
             //Cargar la escena "FirstScene" cuando el identificador del evento es 2
             SceneManager.LoadScene("Vuforia");
         }
-       
+        else if (eventID == 4)
+        {
+            //Cargar la escena "FirstScene" cuando el identificador del evento es 2
+            SceneManager.LoadScene("Vuforia");
+        }
+        else if (eventID == 5)
+        {
+            //Cargar la escena "FirstScene" cuando el identificador del evento es 2
+            SceneManager.LoadScene("Vuforia");
+        }
+
 
     }
 }

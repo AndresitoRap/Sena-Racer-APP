@@ -21,7 +21,7 @@ public class SwipeEffect : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private int _errors = 0;
     public static float finalTime;
     public static int finalErrors;
-    public static int score = 250; // Cambia el puntaje inicial a 300
+    public static int score = 150; // Cambia el puntaje inicial a 300
     private float _lastScoreReductionTime;
     public static GameObject timerObject;
     public AudioSource audioCorrect;

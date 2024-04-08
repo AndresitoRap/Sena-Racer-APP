@@ -1438,8 +1438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: QR Vaca
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 1610557843034021012, guid: a793a3fdd7339a742aee1fbf6a5baf53, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 3150138015641296650, guid: a793a3fdd7339a742aee1fbf6a5baf53, type: 3}
+    - {fileID: 3828331015602186334, guid: a793a3fdd7339a742aee1fbf6a5baf53, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a793a3fdd7339a742aee1fbf6a5baf53, type: 3}

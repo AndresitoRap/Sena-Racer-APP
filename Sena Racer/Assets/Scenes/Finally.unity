@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
   m_sharedMaterial: {fileID: 5874003009630053954, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0000
+  m_text: 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
   m_sharedMaterial: {fileID: 5874003009630053954, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Puntaje
+  m_text: Puntuacion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
   m_sharedMaterial: {fileID: 5874003009630053954, guid: c4c50e92cfcd00442889d441c5306c68, type: 2}
@@ -1746,8 +1746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3641a96353fa6d4ea53ea00bb4ff41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalScoreAndy: {fileID: 1386272453}
-  TotalTimeAndy: {fileID: 1968485225}
+  TotalScore: {fileID: 1386272453}
+  TotalTime: {fileID: 1968485225}
+  Rank: {fileID: 318226400}
 --- !u!1 &1966736903
 GameObject:
   m_ObjectHideFlags: 0
