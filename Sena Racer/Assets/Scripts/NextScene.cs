@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class NextScene : MonoBehaviour
 {
-    public void LoadNextScene(string nameScene) {
+    public void LoadNextScene(string Ranking) {
 
         // Carga la escena 
-        SceneManager.LoadScene(nameScene);
+        SceneManager.LoadScene(Ranking);
     }
 }

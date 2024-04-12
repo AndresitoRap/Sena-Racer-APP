@@ -109,6 +109,22 @@ public class Login : MonoBehaviour
         }
     }
 
+
+    IEnumerator LoadProgress(string username)
+    {
+        // Espera un frame antes de cargar el progreso del usuario
+        yield return null;
+
+        // Aquí deberías cargar el progreso del usuario utilizando su nombre de usuario
+        // Por ejemplo, cargar puntos y tiempo desde una base de datos o un archivo guardado
+        // Aquí solo se simula la carga de puntos y tiempo guardados
+        int savedPoints = PlayerPrefs.GetInt(username + "_Points", 0);
+        float savedTime = PlayerPrefs.GetFloat(username + "_Time", 0f);
+
+        Debug.Log("Puntos cargados: " + savedPoints);
+        Debug.Log("Tiempo cargado: " + savedTime);
+    }
+
     void ShowErrorMessage(string errorMessage)
     {
         MessageError.text = errorMessage;
