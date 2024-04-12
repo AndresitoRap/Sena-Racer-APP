@@ -12,8 +12,16 @@ public class MultiTargetsManager : MonoBehaviour
     private Dictionary<string, GameObject> aRModels = new Dictionary<string, GameObject>();
     private Dictionary<string, bool> modelState = new Dictionary<string, bool>();
 
+    // Referencias a los managers
+    MenuUIManager menuUIManager;
+    EventManager eventManager;
+
     void Start()
     {
+        // Obtener referencias a los managers mediante sus GameObjects
+        menuUIManager = GameObject.Find("Canvas").GetComponent<MenuUIManager>();
+        eventManager = GameObject.Find("EventManager").GetComponent<EventManager>();
+
         foreach (var aRModel in aRModelsToPlace)
         {
             GameObject newARModel = Instantiate(aRModel, Vector3.zero, Quaternion.identity);
@@ -23,6 +31,7 @@ public class MultiTargetsManager : MonoBehaviour
             modelState.Add(newARModel.name, false);
         }
     }
+
 
     private void OnEnable()
     {
@@ -80,4 +89,5 @@ public class MultiTargetsManager : MonoBehaviour
             modelState[trackedImage.referenceImage.name] = false;
         }
     }
+
 }

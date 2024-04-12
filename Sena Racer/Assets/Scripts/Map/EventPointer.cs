@@ -66,7 +66,7 @@ public class EventPointer : MonoBehaviour
         var distance = currentPlayerLocation.GetDistanceTo(eventLocation);
 
         // Verificar si el jugador está dentro del rango del evento
-        if (distance < 70)
+        if (distance < 5)
         {
             // Mostrar el panel de inicio del evento
             menuUIManager.DisplayStartEventPanel(eventID);

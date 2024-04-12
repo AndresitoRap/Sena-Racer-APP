@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EventManager : MonoBehaviour
 {
     // La distancia máxima para activar eventos
-    public int maxDistance = 70;
+    public int maxDistance = 5;
 
     // Método para activar eventos basado en un identificador de evento
     public void ActivateEvent(int eventID)
