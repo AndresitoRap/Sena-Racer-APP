@@ -92,7 +92,17 @@ public class Login : MonoBehaviour
                     {
                         corridorID = runner.id.ToString();
                         Debug.Log("ID del corredor: " + corridorID);
-                        SceneManager.LoadScene("Welcome");
+
+                        // Verificar la variable RankingManager
+                        if (PlayerPrefs.GetInt("RankingManager", 0) == 1)
+                        {
+                            SceneManager.LoadScene("Ranking"); // Si es true, cargar la escena "Ranking"
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("Welcome"); // Si es false, cargar la escena "Welcome"
+                        }
+
                         yield break;
                     }
                 }
@@ -107,33 +117,6 @@ public class Login : MonoBehaviour
             ShowErrorMessage("Error al conectar con el servidor.");
             StartCoroutine(HideErrorMessage());
         }
-    }
-
-
-    IEnumerator LoadProgress(string username)
-    {
-        // Espera un frame antes de cargar el progreso del usuario
-        yield return null;
-
-        // Aquí deberías cargar el progreso del usuario utilizando su nombre de usuario
-        // Por ejemplo, cargar puntos y tiempo desde una base de datos o un archivo guardado
-        // Aquí solo se simula la carga de puntos y tiempo guardados
-        int savedPoints = PlayerPrefs.GetInt(username + "_Points", 0);
-        float savedTime = PlayerPrefs.GetFloat(username + "_Time", 0f);
-
-        Debug.Log("Puntos cargados: " + savedPoints);
-        Debug.Log("Tiempo cargado: " + savedTime);
-    }
-
-    void ShowErrorMessage(string errorMessage)
-    {
-        MessageError.text = errorMessage;
-        ErrorMessageImage.gameObject.SetActive(true);
-        ErrorMessageImage.color = new Color(ErrorMessageImage.color.r, ErrorMessageImage.color.g, ErrorMessageImage.color.b, 0);
-        ErrorMessageImage.rectTransform.anchoredPosition = new Vector2(-ErrorMessageImage.rectTransform.rect.width, ErrorMessageImage.rectTransform.anchoredPosition.y);
-
-        LeanTween.moveX(ErrorMessageImage.rectTransform, 0, 1f).setEase(LeanTweenType.easeOutQuad);
-        LeanTween.alpha(ErrorMessageImage.rectTransform, 1f, 1f).setEase(LeanTweenType.easeInQuad);
     }
 
     IEnumerator HideErrorMessage()
@@ -158,5 +141,16 @@ public class Login : MonoBehaviour
         }
 
         Password.ForceLabelUpdate();
+    }
+
+    void ShowErrorMessage(string errorMessage)
+    {
+        MessageError.text = errorMessage;
+        ErrorMessageImage.gameObject.SetActive(true);
+        ErrorMessageImage.color = new Color(ErrorMessageImage.color.r, ErrorMessageImage.color.g, ErrorMessageImage.color.b, 0);
+        ErrorMessageImage.rectTransform.anchoredPosition = new Vector2(-ErrorMessageImage.rectTransform.rect.width, ErrorMessageImage.rectTransform.anchoredPosition.y);
+
+        LeanTween.moveX(ErrorMessageImage.rectTransform, 0, 1f).setEase(LeanTweenType.easeOutQuad);
+        LeanTween.alpha(ErrorMessageImage.rectTransform, 1f, 1f).setEase(LeanTweenType.easeInQuad);
     }
 }
