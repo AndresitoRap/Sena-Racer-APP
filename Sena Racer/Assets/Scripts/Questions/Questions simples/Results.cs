@@ -38,8 +38,8 @@ public class Results : MonoBehaviour
         }
         else if (sceneName == "XResults")
         {
-            finalScore = PlayerPrefs.GetInt("ScoreXim", 0);
-            timeScore = PlayerPrefs.GetFloat("TimeXim", 0);
+            finalScore = SwipeEffect2.currentScore; // Obtiene la puntuación de SwipeEffect2
+            timeScore = SwipeEffect2.elapsedTime; // Obtiene el tiempo final de SwipeEffect2 
         }
         else if (sceneName == "MResultsporcinos")
         {
