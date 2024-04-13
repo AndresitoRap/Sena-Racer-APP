@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8452cf07651c1a4e9c80d825e6fa10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 70
+  maxDistance: 50
 --- !u!4 &613864759
 Transform:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b9f23e9bce724fa4daac57ecded470b8, type: 2}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _options.locationOptions.zoom
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _options.extentOptions.extentType
@@ -1649,11 +1649,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 843921209}
   _locationStrings:
-  - 4.695481059355139, -74.21688538878685
-  - 4.695754941536729, -74.21701828194821
-  - 4.695536362569716, -74.21678316433527
-  - 4.6954655435532695, -74.21695346160756
-  - 4.695460488443334, -74.21677415347402
+  - 4.721267490567483, -74.21940806911753
+  - 4.721292689623851, -74.21928631721602
+  - 4.7212090303158405, -74.21931450556093
+  - 4.721227995626512, -74.21940483702187
+  - 4.721172698809353, -74.21928765248649
   _spawnScale: 3
   _markerPrefab: {fileID: 7266971455667123862, guid: 324fc640127e6f240809fda20e87dd65, type: 3}
   progressText: {fileID: 1375566811}
