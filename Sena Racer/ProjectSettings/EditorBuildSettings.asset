@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Finally.unity
     guid: 23d1705d65621244a83ded8f92345e66
   - enabled: 1
-    path: Assets/Scenes/Vuforia/Vuforia.unity
+    path: Assets/Scenes/Vuforia/VuforiaSena.unity
     guid: 2e9bf4a115c242745abd8ea425adbec1
   - enabled: 1
     path: Assets/Scenes/Questions/Mauro/apicultura/MExplicationBee.unity

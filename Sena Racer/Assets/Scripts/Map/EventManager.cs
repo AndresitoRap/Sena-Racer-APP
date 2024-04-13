@@ -15,27 +15,27 @@ public class EventManager : MonoBehaviour
         if (eventID == 1)
         {
             // Cargar la escena "FirstScene" cuando el identificador del evento es 1
-            SceneManager.LoadScene("Vuforia");
+            SceneManager.LoadScene("VuforiaSena");
         }
         else if (eventID == 2)
         {
             //Cargar la escena "FirstScene" cuando el identificador del evento es 2
-            SceneManager.LoadScene("Vuforia");
+            SceneManager.LoadScene("VuforiaPorcinos");
         }
         else if (eventID == 3)
         {
             //Cargar la escena "FirstScene" cuando el identificador del evento es 2
-            SceneManager.LoadScene("Vuforia");
+            SceneManager.LoadScene("VuforiaCunicultura");
         }
         else if (eventID == 4)
         {
             //Cargar la escena "FirstScene" cuando el identificador del evento es 2
-            SceneManager.LoadScene("Vuforia");
+            SceneManager.LoadScene("VuforiaGanaderia");
         }
         else if (eventID == 5)
         {
             //Cargar la escena "FirstScene" cuando el identificador del evento es 2
-            SceneManager.LoadScene("Vuforia");
+            SceneManager.LoadScene("VuforiaApicultura");
         }
 
 
