@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440221, g: 0.49316514, b: 0.5722316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -193,13 +193,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -7981514964708312862, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 191127848}
-    - targetCorrespondingSourceObject: {fileID: -7981514964708312862, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 191127851}
     - targetCorrespondingSourceObject: {fileID: -7981514964708312862, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 191127850}
+    - targetCorrespondingSourceObject: {fileID: -7981514964708312862, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 191127852}
   m_SourcePrefab: {fileID: 3150474306388093854, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
 --- !u!4 &191127846 stripped
 Transform:
@@ -211,22 +211,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7981514964708312862, guid: 3b14a9ce1fcd9444abde0a3bffe3855d, type: 3}
   m_PrefabInstance: {fileID: 191127845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &191127848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191127847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d3ee1da72c9964c85eee986229290d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventPoss:
-    x: 0
-    y: 0
-  eventID: 0
 --- !u!64 &191127850
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -270,6 +254,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15, y: 15, z: 15}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &191127852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191127847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d937f93f7d7e3464686f90285fdb50c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: MExplicationBee
 --- !u!1 &333992129
 GameObject:
   m_ObjectHideFlags: 0
