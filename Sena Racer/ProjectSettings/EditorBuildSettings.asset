@@ -83,6 +83,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ranking.unity
     guid: afdbbfeec9faaa949b7ca8b97bd7bde9
+  - enabled: 1
+    path: Assets/Scenes/Vuforia/VuforiaApicultura.unity
+    guid: 51bb153a0d536814bb552e6a53fbb3f4
+  - enabled: 1
+    path: Assets/Scenes/Vuforia/VuforiaCunicultura.unity
+    guid: 5ce7c114a3d36f14597dcbf34c11e1e0
+  - enabled: 1
+    path: Assets/Scenes/Vuforia/VuforiaGanaderia.unity
+    guid: f7d9d933472534d45b538c0a86aa85c5
+  - enabled: 1
+    path: Assets/Scenes/Vuforia/VuforiaPorcinos.unity
+    guid: 0f44f6b27dd9df7458a7359ce5d0384b
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e3859b6ae3a1497448df10bc54e02a21, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c42e91c6434da3a44811c9c47be0459e, type: 2}

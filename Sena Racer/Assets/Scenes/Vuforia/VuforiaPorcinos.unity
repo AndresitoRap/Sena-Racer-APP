@@ -585,6 +585,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &542392740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6091268812220076602, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
+  m_PrefabInstance: {fileID: 1640195172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &542392746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542392740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d937f93f7d7e3464686f90285fdb50c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: MExplicationPorcinos
 --- !u!1 &1356298903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1110,10 @@ PrefabInstance:
     - {fileID: 797513807241563857, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
     - {fileID: 4479770228876443556, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6091268812220076602, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 542392746}
   m_SourcePrefab: {fileID: 100100000, guid: bbcc12d3898a89d4996ce56948c8827e, type: 3}
 --- !u!4 &1640195173 stripped
 Transform:
